@@ -12,8 +12,8 @@ const HomeBanner = () => {
                         <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi <br /> exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <button class="btn btn-primary">Get Started</button>
                     </div>
-                    <div className='shrink-0'>
-                        <img className='w-[422px] mx-auto' src={bucketgirl} alt='' />
+                    <div ata-aos="fade-down-left" className='shrink-0'>
+                        <img  ata-aos="fade-down-left" className='w-[422px] mx-auto' src={bucketgirl} alt='' />
                     </div>
                 </div>
             </div>
