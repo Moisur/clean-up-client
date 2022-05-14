@@ -7,18 +7,24 @@ import Login from "./pages/Login/Login";
 import Services from "./pages/Services/Services";
 
 function App() {
+  const publicRoute=[
+    {path:'/',name:'Home',Component:Home},
+    {path:'/about',name:'About',Component:About},
+    {path:'/services',name:'Services',Component:Services},
+    {path:'/contact',name:'Contact',Component:Contact},
+    {path:'/login',name:'Login',Component:Login},
+  ]
+  
   return (
     <div>
       <Navbar>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/services" element={<Services/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/login" element={<Login/>} />
+          {
+            publicRoute.map((router)=><Route key={router} path={router.path} element={<router.Component/>}/>)
+          }
+     
         </Routes>
       </Navbar>
-
     </div>
   );
 }
